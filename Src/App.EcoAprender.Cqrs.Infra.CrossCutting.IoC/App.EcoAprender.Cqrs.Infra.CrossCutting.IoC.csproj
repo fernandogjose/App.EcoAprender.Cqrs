@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.2" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\App.EcoAprender.Cqrs.Application\App.EcoAprender.Cqrs.Application.csproj" />
+    <ProjectReference Include="..\App.EcoAprender.Cqrs.Domain\App.EcoAprender.Cqrs.Domain.csproj" />
+    <ProjectReference Include="..\App.EcoAprender.Cqrs.Infra.Data.Dapper\App.EcoAprender.Cqrs.Infra.Data.Dapper.csproj" />
+  </ItemGroup>
+
+</Project>
