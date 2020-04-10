@@ -20,9 +20,11 @@ namespace App.EcoAprender.Cqrs.Infra.CrossCutting.IoC
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddTransient<IAnuncioRepository, AnuncioRepository>();
             services.AddTransient<IComunicadoRepository, ComunicadoRepository>();
+            services.AddTransient<IUsuarioRepository, UsuarioRepository>();
 
             // Application
             services.AddTransient<IComunicadoAppService, ComunicadoAppService>();
+            services.AddTransient<ILoginAppService, LoginAppService>();
 
             // Command
             services.AddTransient<IRequestCommand, AnuncioAdicionarCommand>();
