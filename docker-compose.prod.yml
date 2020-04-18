@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+    app.ecoaprender.cqrs.app:
+        container_name: app-ecoaprender-cqrs
+        restart: always
+        build:
+            context: .
+            dockerfile: Src/App.EcoAprender.Cqrs.Api/Dockerfile
+        ports: 
+            - 20000:80
