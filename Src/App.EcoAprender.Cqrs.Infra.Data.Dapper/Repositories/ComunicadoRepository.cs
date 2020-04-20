@@ -1,5 +1,7 @@
-﻿using App.EcoAprender.Cqrs.Domain.Interfaces.Repositories;
-using App.EcoAprender.Cqrs.Domain.Models;
+﻿using App.EcoAprender.Cqrs.Domain.Compartilhado.Interfaces.Repositories;
+using App.EcoAprender.Cqrs.Domain.Comunicado.Commands;
+using App.EcoAprender.Cqrs.Domain.Comunicado.Interfaces.Repositories;
+using App.EcoAprender.Cqrs.Domain.Comunicado.Queries;
 using Dapper;
 using System.Collections.Generic;
 
@@ -9,7 +11,12 @@ namespace App.EcoAprender.Cqrs.Infra.Data.Dapper.Repositories
     {
         public ComunicadoRepository(IUnitOfWork unitOfWork) : base(unitOfWork) { }
 
-        public IEnumerable<Comunicado> Listar()
+        public int Adicionar(ComunicadoAdicionarCommand request)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public IEnumerable<ComunicadoListarResponseQuery> Listar()
         {
             string sql = @"SELECT Comunicado.Id
                                 , Comunicado.CreateDate AS Data
@@ -21,7 +28,7 @@ namespace App.EcoAprender.Cqrs.Infra.Data.Dapper.Repositories
                            WHERE Comunicado.SchoolId = 1";
 
             using var connection = _unitOfWork.Connection;
-            IEnumerable<Comunicado> response = connection.Query<Comunicado>(sql);
+            IEnumerable<ComunicadoListarResponseQuery> response = connection.Query<ComunicadoListarResponseQuery>(sql);
             
             return response;
         }

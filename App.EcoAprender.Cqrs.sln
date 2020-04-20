@@ -9,8 +9,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Domain", "3 - Domain", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infra", "4 - Infra", "{6C2B1398-0544-42A5-A8E9-4246168A2469}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Test", "5 - Test", "{70A35FBC-7BB8-4400-9BBF-3898C7CC9C93}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 - Data", "4.1 - Data", "{5294610F-AC50-4724-A474-F0A19FA9A5A9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2 - CrossCutting", "4.2 - CrossCutting", "{740C3836-0214-4A11-A815-DC8C480F0D49}"
@@ -25,9 +23,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "App.EcoAprender.Cqrs.Infra.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "App.EcoAprender.Cqrs.Infra.CrossCutting.IoC", "Src\App.EcoAprender.Cqrs.Infra.CrossCutting.IoC\App.EcoAprender.Cqrs.Infra.CrossCutting.IoC.csproj", "{CBA7A0FA-F31D-4B94-8BBD-7231CE7E348A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "App.EcoAprender.Cqrs.UnitTest", "Src\App.EcoAprender.Cqrs.UnitTest\App.EcoAprender.Cqrs.UnitTest.csproj", "{4513D937-BE79-465D-A3E0-6D6B985ABDAA}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.EcoAprender.Cqrs.Application", "Src\App.EcoAprender.Cqrs.Application\App.EcoAprender.Cqrs.Application.csproj", "{0048C34B-A35E-4597-ACCE-5B1ACEDE700B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "App.EcoAprender.Cqrs.Application", "Src\App.EcoAprender.Cqrs.Application\App.EcoAprender.Cqrs.Application.csproj", "{0048C34B-A35E-4597-ACCE-5B1ACEDE700B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,10 +47,6 @@ Global
 		{CBA7A0FA-F31D-4B94-8BBD-7231CE7E348A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CBA7A0FA-F31D-4B94-8BBD-7231CE7E348A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CBA7A0FA-F31D-4B94-8BBD-7231CE7E348A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4513D937-BE79-465D-A3E0-6D6B985ABDAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4513D937-BE79-465D-A3E0-6D6B985ABDAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4513D937-BE79-465D-A3E0-6D6B985ABDAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4513D937-BE79-465D-A3E0-6D6B985ABDAA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0048C34B-A35E-4597-ACCE-5B1ACEDE700B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0048C34B-A35E-4597-ACCE-5B1ACEDE700B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0048C34B-A35E-4597-ACCE-5B1ACEDE700B}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -70,7 +62,6 @@ Global
 		{ABA65EA0-5088-4FFD-8ADF-D5355D293D95} = {40EFEB01-F185-4A0A-AA72-BFEA47CAB361}
 		{FDB51EFA-462E-4EF2-8C8D-78EFF9F870A5} = {5294610F-AC50-4724-A474-F0A19FA9A5A9}
 		{CBA7A0FA-F31D-4B94-8BBD-7231CE7E348A} = {740C3836-0214-4A11-A815-DC8C480F0D49}
-		{4513D937-BE79-465D-A3E0-6D6B985ABDAA} = {70A35FBC-7BB8-4400-9BBF-3898C7CC9C93}
 		{0048C34B-A35E-4597-ACCE-5B1ACEDE700B} = {A7BE9A1E-0C17-4C46-9806-EB5AD1475DBA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution

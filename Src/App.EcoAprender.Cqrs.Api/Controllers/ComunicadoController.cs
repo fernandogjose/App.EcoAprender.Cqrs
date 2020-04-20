@@ -1,5 +1,5 @@
-﻿using App.EcoAprender.Cqrs.Application.Interfaces;
-using App.EcoAprender.Cqrs.Application.ViewModels;
+﻿using App.EcoAprender.Cqrs.Application.Compartilhado.ViewModels;
+using App.EcoAprender.Cqrs.Application.Comunicado.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
@@ -18,7 +18,7 @@ namespace App.EcoAprender.Cqrs.Api.Controllers
 
         [HttpGet("listar")]
         [ProducesResponseType(typeof(ResponseViewModel), (int)HttpStatusCode.OK)]
-        public IActionResult Listar()
+        public IActionResult ListarAsync()
         {
             ResponseViewModel response = _comunicadoAppService.Listar();
             return Ok(response);

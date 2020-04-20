@@ -1,5 +1,6 @@
-﻿using App.EcoAprender.Cqrs.Domain.Interfaces.Repositories;
-using App.EcoAprender.Cqrs.Domain.Models;
+﻿using App.EcoAprender.Cqrs.Domain.Compartilhado.Interfaces.Repositories;
+using App.EcoAprender.Cqrs.Domain.Usuario.Interfaces.Repositories;
+using App.EcoAprender.Cqrs.Domain.Usuario.Queries;
 using Dapper;
 
 namespace App.EcoAprender.Cqrs.Infra.Data.Dapper.Repositories
@@ -8,7 +9,7 @@ namespace App.EcoAprender.Cqrs.Infra.Data.Dapper.Repositories
     {
         public UsuarioRepository(IUnitOfWork unitOfWork) : base(unitOfWork) { }
 
-        public Usuario Login(Usuario request)
+        public UsuarioLoginResponseQuery Login(UsuarioLoginRequestQuery request)
         {
             string sql = @"SELECT Usuario.Name as Nome
                                 , Usuario.Email
@@ -17,7 +18,7 @@ namespace App.EcoAprender.Cqrs.Infra.Data.Dapper.Repositories
                              AND Usuario.Password = @Senha";
 
             using var connection = _unitOfWork.Connection;
-            Usuario response = connection.QueryFirstOrDefault<Usuario>(sql, request);
+            UsuarioLoginResponseQuery response = connection.QueryFirstOrDefault<UsuarioLoginResponseQuery>(sql, request);
             
             return response;
         }

@@ -1,4 +1,4 @@
-﻿using App.EcoAprender.Cqrs.Domain.Interfaces.Repositories;
+﻿using App.EcoAprender.Cqrs.Domain.Compartilhado.Interfaces.Repositories;
 using System;
 using System.Data;
 
