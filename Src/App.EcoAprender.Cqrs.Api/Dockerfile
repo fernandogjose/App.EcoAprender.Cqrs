@@ -1,11 +1,9 @@
-#See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
-
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim AS base
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-nanoserver-1903 AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1-nanoserver-1903 AS build
 WORKDIR /src
 COPY ["Src/App.EcoAprender.Cqrs.Api/App.EcoAprender.Cqrs.Api.csproj", "Src/App.EcoAprender.Cqrs.Api/"]
 COPY ["Src/App.EcoAprender.Cqrs.Infra.CrossCutting.IoC/App.EcoAprender.Cqrs.Infra.CrossCutting.IoC.csproj", "Src/App.EcoAprender.Cqrs.Infra.CrossCutting.IoC/"]

@@ -16,7 +16,7 @@ namespace App.EcoAprender.Cqrs.Infra.CrossCutting.IoC
         public static void RegisterServices(IServiceCollection services)
         {
             // Repository
-            services.AddScoped<IDbConnection>(x => new SqlConnection(@"Data Source=sql4.porta80.com.br;Initial Catalog=ecoaprender;Integrated Security=False;User ID=ecoaprender;Password=ahv5G2pH4a@;MultipleActiveResultSets=True;Connect Timeout=30;Encrypt=True;TrustServerCertificate=True"));
+            services.AddScoped<IDbConnection>(x => new SqlConnection(@"Data Source=sql4.porta80.com.br,1433;Initial Catalog=ecoaprender;Integrated Security=False;User ID=ecoaprender;Password=ahv5G2pH4a@;"));
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddTransient<IAnuncioRepository, AnuncioRepository>();
             services.AddTransient<IComunicadoRepository, ComunicadoRepository>();
